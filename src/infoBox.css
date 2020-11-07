@@ -1,0 +1,43 @@
+.infoBox {
+  flex: 1;
+  margin-right: 10px;
+  background-color: rgb(23, 22, 38) !important;
+}
+.infoBox p {
+  color: #cc1034;
+}
+.infoBox :hover {
+  background-color: rgb(245, 103, 124);
+}
+.infoBox__cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox__total {
+  color: #6c757d;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  margin-top: 15px !important;
+}
+
+.Recovered .infoBox__cases {
+  color: green !important;
+}
+.Recovered p {
+  color: green;
+}
+.Deaths p {
+  color: blue !important;
+}
+.Deaths .infoBox__cases {
+  color: rgba(0, 0, 255, 0.63) !important;
+}
+.Recovered :hover {
+  background-color: rgb(121, 198, 121);
+}
+.Deaths :hover {
+  background-color: rgb(85, 204, 234);
+}

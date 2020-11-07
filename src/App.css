@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(23, 22, 38);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(23, 22, 38);
+  padding: 20px;
+}
+
+.app__dropdown {
+  background-color: rgb(31, 30, 48);
+  border: 0px;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.app__header > h1 {
+  color: rgb(148, 148, 148);
+  font-size: 2rem;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__left {
+  flex: 0.9;
+}
+
+.app__information > h3 {
+  color: #6a5d5d;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.app__information > h3:last-of-type {
+  margin-top: 1rem;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  color: rgb(148, 148, 148) !important;
+  background-color: rgb(23, 22, 38) !important;
 }
-
-.App-link {
-  color: #61dafb;
+.line__graph {
+  flex: 1;
+  padding: 15px;
+  background-color: rgb(31, 30, 48);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.worldwide__text {
+  padding-top: 10px;
+}
+.MuiSelect-select {
+  color: rgb(148, 148, 148) !important;
+  font-weight: bold !important;
 }
