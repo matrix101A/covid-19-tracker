@@ -33,7 +33,7 @@
   color: blue !important;
 }
 .Deaths .infoBox__cases {
-  color: rgba(0, 0, 255, 0.63) !important;
+  color: blue !important;
 }
 .Recovered :hover {
   background-color: rgb(121, 198, 121);

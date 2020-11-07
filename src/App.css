@@ -62,6 +62,7 @@ body {
   justify-content: space-evenly;
   color: rgb(148, 148, 148) !important;
   background-color: rgb(23, 22, 38) !important;
+  padding-top: 0px;
 }
 .line__graph {
   flex: 1;
@@ -69,7 +70,10 @@ body {
   background-color: rgb(31, 30, 48);
 }
 .worldwide__text {
-  padding-top: 10px;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-size: 25px;
 }
 .MuiSelect-select {
   color: rgb(148, 148, 148) !important;

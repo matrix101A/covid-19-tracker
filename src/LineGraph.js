@@ -80,7 +80,6 @@ function LineGraph({ casesType, country }) {
         `?lastdays=120`;
 
   useEffect(() => {
-    console.log(casesType);
     switch (casesType) {
       case "deaths":
         setColor("rgb(85, 204, 234)");
@@ -91,7 +90,6 @@ function LineGraph({ casesType, country }) {
       default:
         setColor("rgb(245, 103, 124)");
     }
-    console.log("color is", color);
     const fetchData = async () => {
       await fetch(url)
         .then((response) => {
@@ -112,7 +110,6 @@ function LineGraph({ casesType, country }) {
 
     fetchData();
   }, [casesType, country]);
-  console.log("color shouls be ", color);
   return (
     <div className="line__graph">
       {data?.length > 0 && (
