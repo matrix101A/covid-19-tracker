@@ -13,7 +13,7 @@ body {
   padding: 20px;
 }
 
-.app__dropdown {
+.dropdown {
   background-color: rgb(31, 30, 48);
   border: 0px;
 }
@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
 }
 
-.app__left {
+.content__left {
   flex: 0.9;
 }
 
@@ -56,7 +56,7 @@ body {
   }
 }
 
-.app__right {
+.content__right {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

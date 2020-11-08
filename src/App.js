@@ -1,9 +1,9 @@
 import "./App.css";
-import Table from "./Table";
-import DrawMap from "./DrawMap";
-import LineGraph from "./LineGraph";
-import { sortData, PrettyPrintStat } from "./util";
-import "./map.css";
+import Table from "./components/Table";
+import DrawMap from "./components/DrawMap";
+import LineGraph from "./components/LineGraph";
+import { sortData, PrettyPrintStat } from "./components/utility";
+import "./components/map.css";
 
 import {
   FormControl,
@@ -11,10 +11,9 @@ import {
   Select,
   Card,
   CardContent,
-  Tab,
 } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
-import InfoBox from "./InfoBox";
+import InfoBox from "./components/card";
 function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState("Worldwide");
@@ -42,7 +41,7 @@ function App() {
     };
 
     getCountriesData();
-  }, []); /* runs wherever country is changed */
+  }, []);
 
   useEffect(() => {
     fetch("https://disease.sh/v3/covid-19/all")
@@ -67,17 +66,15 @@ function App() {
         console.log(data);
         setCountry(countryCode);
         setCountryInfo(data);
-
-        setMapZoom(2);
       });
   };
   return (
     <div className="app">
-      <div className="app__left">
+      <div className="content__left">
         <div className="app__header">
           <h1>COVID 19 Tracker</h1>
 
-          <FormControl className="app__dropdown">
+          <FormControl className="dropdown">
             <Select
               variant="outlined"
               value={country}
@@ -126,7 +123,7 @@ function App() {
           />
         </div>
       </div>
-      <Card className="app__right">
+      <Card className="content__right">
         <h3 className="worldwide__text">
           {country} new {casesType}
         </h3>
