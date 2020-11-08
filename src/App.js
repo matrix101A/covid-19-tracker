@@ -56,16 +56,18 @@ function App() {
     const countryCode = event.target.value;
 
     const url =
-      countryCode == "worldwide"
+      countryCode == "Worldwide"
         ? "https://disease.sh/v3/covid-19/all"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+    console.log(url);
 
     await fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setCountry(countryCode);
         setCountryInfo(data);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+
         setMapZoom(2);
       });
   };
